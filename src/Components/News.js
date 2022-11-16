@@ -1,5 +1,5 @@
-import './singleNews.css'
-export default function SingleNews({articles}){
+import './news.css'
+export default function News({articles}){
     return(
         <div>
             {articles 

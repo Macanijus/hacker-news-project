@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react"
-import SingleNews from "./SingleNews";
-import "./singleNews.css"
+import News from "./News";
 import {SpinnerCircular} from "spinners-react";
 
 
-export default function Search(){
+export default function Search(searchWord){
     const [userInput , setUserInput] = useState("");
     const [articles , setArticles] = useState([]);
     const [loading , setLoading] = useState(true);
-    
-    
-    
-
     const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story`;
-   
+    const handleSubmit = event => {
+        event.preventDefault();
+    }
+    
+    useEffect( () => {
+        fetchData();
+    }, [ userInput ] );
 
-   const handleSubmit = event => {
-    event.preventDefault();
-   }
-
-
-    function fetchData(){
+    function fetchData() {
+        console.log("Seatch: ", searchWord);
         setLoading(true);
         fetch(url)
         .then((res) => res.json())
@@ -31,15 +28,6 @@ export default function Search(){
         })
         .catch((e) => console.log(e));
     }
-    
-    
-
-    
-    useEffect(()=>{
-        fetchData();
-    }, [userInput] );
-
-    
 
     return (
         <div>
@@ -49,18 +37,9 @@ export default function Search(){
                 </div>
             ) : (
                 <div>
-                    <form onSubmit={handleSubmit} className="search-bar" >
-                        <input 
-                        type='text'
-                        value= {userInput}
-                        onChange={(e) => setUserInput(e.target.value)}
-                        placeholder="search posts"/>
-                        <button type="submit" >Search</button>
-                    </form>
-                    <SingleNews articles={articles}/>
+                    <News articles={articles}/>
                 </div>
             )}
         </div>
-    
     )
 }
