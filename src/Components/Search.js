@@ -4,20 +4,16 @@ import {SpinnerCircular} from "spinners-react";
 
 
 export default function Search(searchWord){
-    const [userInput , setUserInput] = useState("");
     const [articles , setArticles] = useState([]);
     const [loading , setLoading] = useState(true);
-    const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story`;
-    const handleSubmit = event => {
-        event.preventDefault();
-    }
+    const url = `http://hn.algolia.com/api/v1/search?query=${searchWord}&tags=story`;
     
     useEffect( () => {
         fetchData();
-    }, [ userInput ] );
+    }, [ searchWord ] );
 
     function fetchData() {
-        console.log("Seatch: ", searchWord);
+        console.log("Search: ", searchWord);
         setLoading(true);
         fetch(url)
         .then((res) => res.json())

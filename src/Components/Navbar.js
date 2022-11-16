@@ -1,12 +1,7 @@
 import "./navbar.css";
 import SearchChange from "../App"
 
-export default function Navbar(handleSearchChange) {
-  const onChange = (searchText) => {
-    console.log("NAVBAR: ", searchText);
-    handleSearchChange(searchText);
-  }
-
+export default function Navbar({handleSearchChange}) {
   return (
     <div>
       <section>
@@ -14,8 +9,7 @@ export default function Navbar(handleSearchChange) {
           <h1 id="title"> Hacker News </h1>
           <input 
             type='text'
-            value= ""
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             placeholder="search posts"/>
         </div>
       </section>

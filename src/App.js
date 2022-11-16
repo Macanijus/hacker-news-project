@@ -7,15 +7,14 @@ import Spinner from './Components/Spinner';
 function App() {
   const [searchWord, setSearchWord] = useState("");
 
-  const handleSearchChange = (searchWord) =>{
-    console.log("APP: ", searchWord);
-    setSearchWord(searchWord)
+  const handleSearchChange = (searchW) =>{
+    setSearchWord(searchW)
   }
 
   return (
     <div className="App">
       <Navbar handleSearchChange = { handleSearchChange } />
-      <Search searchWord={ searchWord } />      
+      <Search searchWord = { searchWord } />      
     </div>
   );
 }
