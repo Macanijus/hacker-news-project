@@ -13,7 +13,6 @@ export default function Search({searchWord}){
     }, [searchWord] );
 
     function fetchData() {
-        console.log("Search: ", searchWord);
         setLoading(true);
         fetch(url)
         .then((res) => res.json())
