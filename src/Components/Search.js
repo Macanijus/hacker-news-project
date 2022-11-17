@@ -3,14 +3,14 @@ import News from "./News";
 import {SpinnerCircular} from "spinners-react";
 
 
-export default function Search(searchWord){
+export default function Search({searchWord}){
     const [articles , setArticles] = useState([]);
     const [loading , setLoading] = useState(true);
     const url = `http://hn.algolia.com/api/v1/search?query=${searchWord}&tags=story`;
     
     useEffect( () => {
         fetchData();
-    }, [ searchWord ] );
+    }, [searchWord] );
 
     function fetchData() {
         console.log("Search: ", searchWord);
