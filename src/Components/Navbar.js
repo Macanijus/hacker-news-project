@@ -1,6 +1,6 @@
 import "./navbar.css";
 
-export default function Navbar({handleSearchChange}) {
+export default function Navbar({ handleSearchChange }) {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSearchChange(event.target.value);
@@ -12,15 +12,16 @@ export default function Navbar({handleSearchChange}) {
       <section>
         <div className="nav">
           <h1 id="title"> Hacker News </h1>
-          <div className="input">
-          <input 
-            type='text'
-            onKeyDown={ handleKeyDown }
-            placeholder="search posts"/>
-            </div>
-            <p className="login"><a href="#">Login</a></p>
+          <div className="searchBox">
+            <input
+              type="search"
+              onKeyDown={handleKeyDown}
+              placeholder="search here..."
+            />
+            <i class="fa fa-search"></i>
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

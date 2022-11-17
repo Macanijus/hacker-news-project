@@ -1,52 +1,64 @@
-.nav{
-    width: 100%;
-    height: 65px;
-    background-color: orange;
-    display: inline-flex;
-    align-items: center;
-   
-   
-}
-.input-field{
-    padding-left: 25%;
-    
+.nav {
+  width: 100%;
+  height: 65px;
+  background-color: orange;
+  display: inline-flex;
+  align-items: center;
 }
 
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border-radius: 10px;
-   
-  }
-  
-  input::placeholder {
-    color: black;
-    font-size: 1.1em;
-    text-align: center;
-  }
-
-.input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 32%;
-    
+#title {
+  padding-left: 5%;
+  font-size: 23px;
 }
 
-#title{
-    padding-left: 5%;
+.searchBox {
+  position: absolute;
+  top: 3.5%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button:hover {
-  cursor: pointer;
-  transition: 0.7s;
-  background-color:#0a0a23;
+.searchBox input {
+  background-color: rgb(64, 134, 138);
+  border: none;
+  outline: none;
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  border-radius: 40px;
+  line-height: 40px;
+  font-size: 18px;
   color: #fff;
+  transition: all 1s;
 }
 
-.login{
-    display: flex;
-    padding-left: 40%;
-    font-weight:bolder;
+.searchBox input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.searchBox i {
+  background-color: rgb(64, 134, 138);
+  width: 40px;
+  height: 40px;
+  padding: 2px 9px 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.searchBox:hover input {
+  width: 240px;
+  opacity: 1;
+  padding: 10px 20px;
+}
+
+.searchBox:hover i {
+  color: #fff;
 }
