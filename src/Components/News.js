@@ -1,4 +1,6 @@
+import Spinner from './Spinner';
 import './news.css'
+
 export default function News({articles}){
     return(
         <div>
@@ -15,7 +17,7 @@ export default function News({articles}){
                 );
             
          })
-            : " no posts"}
+            : <Spinner />}
         </div>
     );
 }

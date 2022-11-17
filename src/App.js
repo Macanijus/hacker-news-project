@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Navbar from "./Components/Navbar"
+import Navbar from "./Components/Navbar";
 import Search from './Components/Search';
-import Spinner from './Components/Spinner';
 
 function App() {
   const [searchWord, setSearchWord] = useState("");
