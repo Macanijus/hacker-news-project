@@ -12,7 +12,8 @@ export default function Search({searchWord}){
         fetchData();
     }, [searchWord] );
 
-    function fetchData() {
+    function fetchData(){
+        setTimeout(() => {
         setLoading(true);
         fetch(url)
         .then((res) => res.json())
@@ -22,6 +23,7 @@ export default function Search({searchWord}){
             console.log(data.hits);
         })
         .catch((e) => console.log(e));
+    }, 1500)
     }
 
     return (

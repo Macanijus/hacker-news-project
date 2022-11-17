@@ -12,10 +12,13 @@ export default function Navbar({handleSearchChange}) {
       <section>
         <div className="nav">
           <h1 id="title"> Hacker News </h1>
+          <div className="input">
           <input 
             type='text'
             onKeyDown={ handleKeyDown }
             placeholder="search posts"/>
+            </div>
+            <p className="login"><a href="#">Login</a></p>
         </div>
       </section>
     </div>
