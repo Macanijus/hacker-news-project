@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Search from "./Components/Search";
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Navbar handleSearchChange={handleSearchChange} />
       <Search articlesPerPage={6} searchWord={searchWord} />
+      <Footer />
     </div>
   );
 }
