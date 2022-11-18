@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  height: 65px;
+  background-color: orange;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-input {
+  border-radius: 15px;
+  padding: 10px 30px;
+  color: gray;
+  font-size: 18px;
+  border: none;
+}
+
+.footer-button {
+  background-color: rgb(64, 134, 138);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.footer-button:hover {
+  cursor: pointer;
+  border-width: 5px;
+  color: #fff;
+  transition: all 1s;
+}
+.copyright {
+  bottom: 0;
+  margin-bottom: auto;
+}
+.social-icons {
+  font-size: 25px;
+  margin-left: 600px;
+}
